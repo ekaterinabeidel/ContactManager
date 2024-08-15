@@ -5,15 +5,14 @@ import org.example.contactmanager.model.ContactDTO;
 
 import java.util.List;
 
-public class DatabaseContactRepository implements ContactRepositoryInterface{
-
+public class DatabaseContactRepository implements ContactRepositoryInterface<Contact, ContactDTO> {
     @Override
     public ContactDTO getContactById(int id) {
         return null;
     }
 
     @Override
-    public List<ContactDTO> getAllContacts() {
+    public List<Contact> getAllContacts() {
         return null;
     }
 
@@ -32,3 +31,4 @@ public class DatabaseContactRepository implements ContactRepositoryInterface{
         return false;
     }
 }
+

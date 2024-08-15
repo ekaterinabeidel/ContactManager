@@ -3,27 +3,29 @@ package org.example.contactmanager.persistentLayer;
 import org.example.contactmanager.model.Contact;
 import org.example.contactmanager.model.ContactDTO;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class InMemoryContactRepository implements ContactRepositoryInterface{
+public class InMemoryContactRepository implements ContactRepositoryInterface<Contact, Contact>{
+    private final List<Contact> contactList = new ArrayList<>();
 
     @Override
-    public ContactDTO getContactById(int id) {
+    public Contact getContactById(int id) {
         return null;
     }
 
     @Override
-    public List<ContactDTO> getAllContacts() {
+    public List<Contact> getAllContacts() {
         return null;
     }
 
     @Override
-    public Contact createContact(ContactDTO contactDTO) {
+    public Contact createContact(Contact contact) {
         return null;
     }
 
     @Override
-    public ContactDTO updateContact(int id, ContactDTO newContact) {
+    public Contact updateContact(int id, Contact newContact) {
         return null;
     }
 
