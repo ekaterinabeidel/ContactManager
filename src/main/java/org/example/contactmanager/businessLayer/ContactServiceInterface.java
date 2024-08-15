@@ -6,11 +6,11 @@ import org.example.contactmanager.model.ContactDTO;
 import java.util.List;
 import java.util.UUID;
 
-public interface ContactServiceInterface {
-    ContactDTO getContactById (int id) throws Exception;
-    List<ContactDTO> getAllContacts() throws Exception;
-    Contact createContact(ContactDTO contactDTO);
-    ContactDTO updateContact (int id, ContactDTO newContact);
+public interface ContactServiceInterface<T,U> {
+    U getContactById (int id);
+    List<T> getAllContacts();
+    T createContact(U contactDTO);
 
+    U updateContact (int id, U newContact);
     boolean deleteContactById(int id);
 }

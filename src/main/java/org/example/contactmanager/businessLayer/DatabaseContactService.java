@@ -1,19 +1,21 @@
 package org.example.contactmanager.businessLayer;
 
-import org.example.contactmanager.model.Contact;
 import org.example.contactmanager.model.ContactDTO;
+import org.example.contactmanager.model.Contact;
+import org.example.contactmanager.persistentLayer.DatabaseContactRepository;
 
 import java.util.List;
 
-public class DatabaseContactService implements  ContactServiceInterface{
-
+public class DatabaseContactService implements  ContactServiceInterface<Contact, ContactDTO>{
+   private DatabaseContactRepository dbRepository;
     @Override
-    public ContactDTO getContactById(int id) {
+    public ContactDTO getContactById(int id){
         return null;
+
     }
 
     @Override
-    public List<ContactDTO> getAllContacts() {
+    public List<Contact> getAllContacts(){
         return null;
     }
 
@@ -26,6 +28,7 @@ public class DatabaseContactService implements  ContactServiceInterface{
     public ContactDTO updateContact(int id, ContactDTO newContact) {
         return null;
     }
+
 
     @Override
     public boolean deleteContactById(int id) {

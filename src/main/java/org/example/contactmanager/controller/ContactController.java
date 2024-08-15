@@ -16,12 +16,12 @@ public class ContactController {
 
     @PostMapping("create")
     public Contact createContact(@RequestBody  ContactDTO contactDTO) {
-        return repositoryInterface.createContact(contactDTO);
+        return (Contact) repositoryInterface.createContact(contactDTO);
     }
 
     @GetMapping("getByID")
     public ContactDTO getContactById (@RequestBody  int id) {
-        return repositoryInterface.getContactById(id);
+        return (ContactDTO) repositoryInterface.getContactById(id);
     }
 
     @GetMapping("getAll")
@@ -31,7 +31,7 @@ public class ContactController {
 
     @PutMapping("update")
     public ContactDTO updateContact (@RequestBody  int id, ContactDTO newContact) {
-        return repositoryInterface.updateContact(id, newContact);
+        return (ContactDTO) repositoryInterface.updateContact(id, newContact);
     }
 
     @DeleteMapping("delete")

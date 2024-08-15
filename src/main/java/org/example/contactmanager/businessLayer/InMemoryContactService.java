@@ -7,33 +7,28 @@ import org.example.contactmanager.persistentLayer.InMemoryContactRepository;
 import java.util.ArrayList;
 import java.util.List;
 
-public class InMemoryContactService implements  ContactServiceInterface{
-    InMemoryContactRepository  memoryRepository;
+public class InMemoryContactService implements  ContactServiceInterface<Contact, Contact>{
+    private  InMemoryContactRepository MemoryRepository;
+
+
 
     @Override
-    public ContactDTO getContactById(int id) throws Exception {
-        if (id == 0) {
-            throw new Exception("Incorrect id");
-        }
-
-        return memoryRepository.contactDTOList.get(id);
-    }
-
-    @Override
-    public List<ContactDTO> getAllContacts() throws Exception {
-        if (memoryRepository.contactDTOList.isEmpty()) {
-            throw new Exception("List is empty");
-        }
-        return memoryRepository.contactDTOList;
-    }
-
-    @Override
-    public Contact createContact(ContactDTO contactDTO) {
+    public Contact getContactById(int id) {
         return null;
     }
 
     @Override
-    public ContactDTO updateContact(int id, ContactDTO newContact) {
+    public List<Contact> getAllContacts() {
+        return null;
+    }
+
+    @Override
+    public Contact createContact(Contact contact) {
+        return null;
+    }
+
+    @Override
+    public Contact updateContact(int id, Contact newContact) {
         return null;
     }
 
