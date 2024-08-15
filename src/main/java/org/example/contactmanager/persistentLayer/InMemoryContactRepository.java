@@ -3,9 +3,11 @@ package org.example.contactmanager.persistentLayer;
 import org.example.contactmanager.model.Contact;
 import org.example.contactmanager.model.ContactDTO;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class InMemoryContactRepository implements ContactRepositoryInterface{
+    public final List<ContactDTO> contactDTOList = new ArrayList<>();
 
     @Override
     public ContactDTO getContactById(int id) {

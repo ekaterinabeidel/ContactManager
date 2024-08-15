@@ -7,8 +7,8 @@ import java.util.List;
 import java.util.UUID;
 
 public interface ContactServiceInterface {
-    ContactDTO getContactById (int id);
-    List<ContactDTO> getAllContacts();
+    ContactDTO getContactById (int id) throws Exception;
+    List<ContactDTO> getAllContacts() throws Exception;
     Contact createContact(ContactDTO contactDTO);
     ContactDTO updateContact (int id, ContactDTO newContact);
 
