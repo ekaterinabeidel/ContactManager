@@ -1,27 +1,29 @@
 package org.example.contactmanager.persistentLayer;
 
 import org.example.contactmanager.model.Contact;
+import org.example.contactmanager.model.ContactDTO;
 
 import java.util.List;
 
 public class InMemoryContactRepository implements ContactRepositoryInterface{
+
     @Override
-    public Contact getContactById() {
+    public ContactDTO getContactById(int id) {
         return null;
     }
 
     @Override
-    public List<Contact> getAllContacts() {
+    public List<ContactDTO> getAllContacts() {
         return null;
     }
 
     @Override
-    public Contact createContact() {
+    public Contact createContact(ContactDTO contactDTO) {
         return null;
     }
 
     @Override
-    public Contact updateContact(int id, Contact newContact) {
+    public ContactDTO updateContact(int id, ContactDTO newContact) {
         return null;
     }
 

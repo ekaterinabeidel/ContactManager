@@ -1,14 +1,15 @@
 package org.example.contactmanager.persistentLayer;
 
 import org.example.contactmanager.model.Contact;
+import org.example.contactmanager.model.ContactDTO;
 
 import java.util.List;
 import java.util.UUID;
 
 public interface ContactRepositoryInterface {
-    Contact getContactById ();
-    List<Contact> getAllContacts();
-    Contact createContact();
-    Contact updateContact (int id, Contact newContact);
+    ContactDTO getContactById (int id);
+    List<ContactDTO> getAllContacts();
+    Contact createContact(ContactDTO contactDTO);
+    ContactDTO updateContact (int id, ContactDTO newContact);
     boolean deleteContactById(int id);
 }
